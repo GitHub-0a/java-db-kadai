@@ -66,7 +66,8 @@ public class Posts_Chapter07 {
                 String posted_at = result.getString("posted_at");
                 String post_content = result.getString("post_content");
                 int likes = result.getInt("likes");
-                System.out.println(result.getRow() + "件目：投稿日時=" + posted_at + "／投稿内容=" + post_content  + "／いいね数=" + likes );
+                if (result.getRow() == 1) {System.out.println("ユーザーIDが1002のレコードを検索しました");} //出力4
+                System.out.println(result.getRow() + "件目：投稿日時=" + posted_at + "／投稿内容=" + post_content  + "／いいね数=" + likes );//出力5
             }
             
         } catch(SQLException e) {
